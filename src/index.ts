@@ -1,5 +1,1 @@
-import includes from './includes/includes';
-
-export default {
-  includes,
-};
+export * from './includes';
