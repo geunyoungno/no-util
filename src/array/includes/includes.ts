@@ -1,3 +1,5 @@
+import TReadonlyableArray from '#interface/TReadonlyableArray/TReadonlyableArray';
+
 /**
  * Includes for any array
  * @param arr Array
@@ -6,7 +8,7 @@
  * @returns {boolean}
  */
 export default function includes<T extends unknown>(
-  arr: T[] | readonly T[],
+  arr: TReadonlyableArray<T>,
   searchElement: any,
   fromIndex?: number,
 ): searchElement is T {

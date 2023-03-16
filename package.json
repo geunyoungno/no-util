@@ -1,6 +1,6 @@
 {
   "name": "no-util",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/cjs/index.cjs",
   "module": "dist/esm/index.mjs",
@@ -15,6 +15,8 @@
   "scripts": {
     "lint": "eslint --quiet --ext ts,tsx .",
     "clean": "rimraf dist artifact",
+    "ctix:single": "cross-env NODE_ENV=production npx ctix single -p ./tsconfig.json --config ./.configs/.ctirc",
+    "ctix:remove": "cross-env NODE_ENV=production npx ctix remove -p ./tsconfig.json --config ./.configs/.ctirc",
     "prerollup:dev": "npm run clean",
     "rollup:dev": "cross-env NODE_ENV=production rollup --config ./.configs/rollup.config.dev.ts --configPlugin ts"
   },
@@ -37,6 +39,7 @@
     "@tsconfig/node16": "^1.0.3",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
+    "create-ts-index": "^1.14.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.34.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
