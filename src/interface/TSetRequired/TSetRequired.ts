@@ -1,3 +1,3 @@
-type TSetRequired<TObj, TKey extends keyof TObj> = Omit<TObj, TKey> & Required<Pick<TObj, TKey>>;
+type TSetRequired<TBase extends object, TKey extends keyof TBase> = Omit<TBase, TKey> & Required<Pick<TBase, TKey>>;
 
 export default TSetRequired;

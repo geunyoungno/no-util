@@ -7,10 +7,10 @@ import TReadonlyableArray from '#interface/TReadonlyableArray/TReadonlyableArray
  * @param fromIndex
  * @returns {boolean}
  */
-export default function includes<T extends unknown>(
-  arr: TReadonlyableArray<T>,
+export default function includes<TBase extends unknown>(
+  arr: TReadonlyableArray<TBase>,
   searchElement: any,
   fromIndex?: number,
-): searchElement is T {
+): searchElement is TBase {
   return arr.includes(searchElement, fromIndex);
 }

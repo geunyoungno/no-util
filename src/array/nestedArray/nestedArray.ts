@@ -1,4 +1,4 @@
-import { TReadonlyableArray } from 'src';
+import TReadonlyableArray from '#interface/TReadonlyableArray/TReadonlyableArray';
 
 // const array1 = [1, 2, 3] as const;
 // const array2 = [4, 5, 6] as const;
@@ -9,12 +9,15 @@ import { TReadonlyableArray } from 'src';
  * @param array2
  * @returns array
  */
-export default function nestedArray<T1, T2>(array1: TReadonlyableArray<T1>, array2: TReadonlyableArray<T2>) {
-  const array: Array<[T1, T2]> = [];
+export default function nestedArray<TArray1, TArray2>(
+  array1: TReadonlyableArray<TArray1>,
+  array2: TReadonlyableArray<TArray2>,
+) {
+  const array: Array<[TArray1, TArray2]> = [];
 
   array1.forEach((element1) => {
     array2.forEach((element2) => {
-      const arr: [T1, T2] = [element1, element2];
+      const arr: [TArray1, TArray2] = [element1, element2];
       array.push(arr);
     });
   });

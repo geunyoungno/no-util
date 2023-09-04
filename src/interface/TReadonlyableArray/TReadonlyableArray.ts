@@ -1,3 +1,3 @@
-type TReadonlyableArray<T extends unknown> = T[] | readonly T[];
+type TReadonlyableArray<TBase extends unknown> = TBase[] | readonly TBase[];
 
 export default TReadonlyableArray;

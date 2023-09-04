@@ -1,4 +1,10 @@
 export { default as first } from './array/first/first';
 export { default as includes } from './array/includes/includes';
 export { default as isArray } from './array/isArray/isArray';
+export { default as nestedArray } from './array/nestedArray/nestedArray';
+export type { default as TNullableToOptional } from './interface/TNullableToOptioanl/TNullableToOptioanl';
+export type { default as TRequiredKeys } from './interface/TNullableToOptioanl/TRequiredKeys';
 export type { default as TReadonlyableArray } from './interface/TReadonlyableArray/TReadonlyableArray';
+export type { default as TSetRequired } from './interface/TSetRequired/TSetRequired';
+export { default as explicitType } from './misc/explicitType';
+export { default as setRequired } from './object/setRequired';
